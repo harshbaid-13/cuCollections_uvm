@@ -58,10 +58,13 @@ class cuda_allocator {
     printf("size of value type: %lu\n", sizeof(value_type));
     CUCO_CUDA_TRY(cudaMallocManaged(&p, sizeof(value_type) * n));
     // #if defined(UVM_MEM_ADVISE_SA)
-    cudaMemAdvise(p, (sizeof(value_type) * n), cudaMemAdviseSetAccessedBy, 0);
+    cudaMemLocation loc = {};
+    loc.type = cudaMemLocationTypeDevice;
+    loc.id = 0;
+    cudaMemAdvise(p, (sizeof(value_type) * n), cudaMemAdviseSetAccessedBy, loc);
     // #endif
     // #if defined(UVM_PREFETCH_HINT)
-    cudaMemPrefetchAsync(p, (n * sizeof(value_type)), 0);
+    cudaMemPrefetchAsync(p, (n * sizeof(value_type)), loc, 0, 0);
     // #endif
     return p;
   }
