@@ -1,0 +1,77 @@
+==============================================
+Trace file : insert_trace-400e7-100-add-20-dup-DENSE_REPEAT.bin
+Output dir : Results/Inserts/Dense_Repeat
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-MONOTONIC_INCREASE.bin
+Output dir : Results/Inserts/Monotonic_Increase
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-20-dup-SPARSE_REPEAT.bin
+Output dir : Results/Inserts/Sparse_Repeat
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-DENSE_UNIQUE_1e9_Clusters.bin
+Output dir : Results/Inserts/1e9_Clusters
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-SPARSE_UNIQUE_5e8_Random_Clusters.bin
+Output dir : Results/Inserts/Random_Clusters
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-SPARSE_UNIQUE_ZigZag.bin
+Output dir : Results/Inserts/ZigZag
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-SPARSE_UNIQUE.bin
+Output dir : Results/Inserts/Sparse_Unique
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
+  → Running num-keys=4000000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-SPARSE_UNIQUE.bin
+Output dir : Results/Inserts/Sparse_Unique
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+==============================================
+Trace file : insert_trace-400e7-100-add-no-dup-DENSE_UNIQUE.bin
+Output dir : Results/Inserts/Dense_Unique
+==============================================
+  → Running num-keys=2000000000
+  → Running num-keys=2500000000
+  → Running num-keys=3000000000
+  → Running num-keys=3500000000
