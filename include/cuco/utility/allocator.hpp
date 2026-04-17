@@ -20,6 +20,8 @@
 
 #include <cuda/stream_ref>
 
+#include <cuda_runtime.h>
+
 #include <cstddef>
 
 namespace cuco {
@@ -54,15 +56,12 @@ class cuda_allocator {
   {
     value_type* p;
     n = static_cast<size_t>(static_cast<double>(n) / 0.9);
-    printf("size of table: %lu\n", n);
-    printf("size of value type: %lu\n", sizeof(value_type));
     CUCO_CUDA_TRY(cudaMallocManaged(&p, sizeof(value_type) * n));
-    // #if defined(UVM_MEM_ADVISE_SA)
-    cudaMemAdvise(p, (sizeof(value_type) * n), cudaMemAdviseSetAccessedBy, 0);
-    // #endif
-    // #if defined(UVM_PREFETCH_HINT)
-    cudaMemPrefetchAsync(p, (n * sizeof(value_type)), 0);
-    // #endif
+    int device = 0;
+    CUCO_CUDA_TRY(cudaGetDevice(&device));
+    CUCO_CUDA_TRY(
+      cudaMemAdvise(p, sizeof(value_type) * n, cudaMemAdviseSetAccessedBy, device));
+    CUCO_CUDA_TRY(cudaMemPrefetchAsync(p, n * sizeof(value_type), device, stream.get()));
     return p;
   }
 
